@@ -1,0 +1,24 @@
+@if(investmentResultRecords && investmentResultRecords.length != 0){
+<table>
+  <thead>
+    <th>Year</th>
+    <th>Investment Value</th>
+    <th>Interest (Year)</th>
+    <th>Total Interest</th>
+    <th>Invested Capital</th>
+  </thead>
+
+  <tbody>
+    <!-- Generated from the service?-->
+    @for(result of investmentResultRecords; track result.year){
+    <tr>
+      <td>{{result.year}}</td>
+      <td>{{result.investmentValue| number: '1.2-2'}}</td>
+      <td>{{result.interestYear | number: '1.2-2'}}</td>
+      <td>{{result.totalInterest | number: '1.2-2'}}</td>
+      <td>{{result.investedCapital | number: '1.2-2'}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
