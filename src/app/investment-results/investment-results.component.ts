@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { InvestmentResultsService } from './investment-results.service';
 import { InvestmentYearRecord } from './investment-year-record.model';
-import { DecimalPipe } from '@angular/common';
+import { CurrencyPipe, DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-investment-results',
   standalone: true,
-  imports: [DecimalPipe],
+  imports: [CurrencyPipe],
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css'
 })
